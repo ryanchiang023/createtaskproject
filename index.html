@@ -24,7 +24,7 @@
         <button id="player3">Button</button>
         <button id="player4">Button</button>
 
-        <!-- Stat Display Grid (Kept original 3Ptext ID so JS fills the value) -->
+        <!-- Stat Display Grid (Using your exact original ID 3Ptext) -->
         <div id="MPtext" class="textArea">MP</div>
         <div id="PTStext" class="textArea">PTS</div>
         <div id="TRBtext" class="textArea">TRB</div>
@@ -34,11 +34,17 @@
         <div id="FGtext" class="textArea">FG%</div>
         <div id="3Ptext" class="textArea">3P%</div>
 
-        <!-- Legend Key (Wrapped in a container so you can hide it if your JS wants to) -->
-        <div id="legend-container">
-            <div id="key-title" class="textArea"><b>Key:</b></div>
-            <div id="key1" class="textArea">MP: Min Played<br>PTS: Points<br>TRB: Rebounds<br>AST: Assists</div>
-            <div id="key2" class="textArea">BLK: Blocks<br>STL: Steals<br>FG%: FG %<br>3P%: 3P %</div>
+        <!-- Legend Key Block (Centered "Key:" title with two clean columns beneath it) -->
+        <div id="key-container" class="textArea">
+            <div style="text-align: center; font-weight: bold; margin-bottom: 2px;">Key:</div>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="text-align: left; width: 48%;">
+                    MP: Min Played<br>PTS: Points<br>TRB: Rebounds<br>AST: Assists
+                </div>
+                <div style="text-align: left; width: 48%;">
+                    BLK: Blocks<br>STL: Steals<br>FG%: FG %<br>3P%: 3P %
+                </div>
+            </div>
         </div>
 
         <!-- Feedback & Next Button -->
@@ -50,7 +56,7 @@
     <!-- END SCREEN -->
     <div id="end" class="screen" style="display: none;">
         <div id="text_area3" class="textArea">Good Job!</div>
-        <img id="image1" src="giannis-thumbs-up.jpg" alt="Giannis Thumbs Up">
+        <img id="image1" src="assets/giannis-thumbs-up.jpg" alt="Giannis Thumbs Up">
     </div>
 
     <script src="app.js"></script>

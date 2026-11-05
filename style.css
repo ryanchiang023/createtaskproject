@@ -82,11 +82,11 @@ body {
 #player3 { height: 48px; width: 115px; left: 25px; top: 325px; }
 #player4 { height: 48px; width: 115px; left: 175px; top: 325px; }
 
-/* Perfectly Spaced Stat Grid */
+/* Stat Display Grid (Accurate positioning matching your original layout) */
 #MPtext, #PTStext, #TRBtext, #ASTtext, #BLKtext, #STLtext, #FGtext, #3Ptext {
     position: absolute !important;
     height: 40px; 
-    font-size: 11.5px; 
+    font-size: 11px; 
     text-align: center; 
     color: black;
     box-sizing: border-box;
@@ -99,51 +99,30 @@ body {
 #ASTtext { width: 55px; left: 180px; top: 78px; }
 #BLKtext { width: 55px; left: 236px; top: 78px; }
 
-/* Bottom Row (3 items, with 3Ptext matching FGtext position) */
+/* Bottom Row (3 items) */
 #STLtext { width: 75px; left: 45px; top: 132px; }
 #FGtext  { width: 75px; left: 122px; top: 132px; }
 #3Ptext  { width: 75px; left: 199px; top: 132px; }
 
-/* Centered Key Title & Balanced Dual Columns */
-#key-title {
+/* Unified Key Container Box */
+#key-container {
     position: absolute !important;
-    width: 320px;
-    left: 0px;
-    top: 382px;
-    font-size: 10px;
-    text-align: center;
+    width: 260px;
+    height: 65px;
+    left: 30px;
+    top: 380px;
+    font-size: 8.5px;
     color: #333;
-}
-
-#key1 { 
-    position: absolute !important; 
-    width: 140px; 
-    font-size: 8px; 
-    left: 20px; 
-    top: 397px; 
-    color: #333; 
-    line-height: 1.2;
-    text-align: left;
-}
-
-#key2 { 
-    position: absolute !important; 
-    width: 140px; 
-    font-size: 8px; 
-    left: 165px; 
-    top: 397px; 
-    color: #333; 
-    line-height: 1.2;
-    text-align: left;
+    line-height: 1.25;
 }
 
 /* Feedback Messages & Next Button */
 #tryagain1 {
     position: absolute !important;
     width: 200px;
-    height: 50px;
+    height: 40px;
     left: 60px;
-    top: 380px;
+    top: 385px;
     font-size: 22px;
     text-align: center;
     color: black;
@@ -152,9 +131,9 @@ body {
 #nicework1 {
     position: absolute !important;
     width: 235px;
-    height: 50px;
+    height: 40px;
     left: 45px;
-    top: 380px;
+    top: 385px;
     font-size: 26px;
     text-align: center;
     color: black;
