@@ -100,9 +100,18 @@ body {
     color: black;
 }
 
-/* 3P% VALUE */
+/* 3P% STATISTIC */
 #threePtext {
     font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#threePvalue {
+    display: block;
+    line-height: 1.4;
 }
 
 /* Player buttons - ORIGINAL POSITIONS */
@@ -150,7 +159,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 385px;
+    top: 365px;
 
     width: 290px;
 

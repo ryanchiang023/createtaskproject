@@ -101,9 +101,8 @@ function initializeApp() {
         document.getElementById("nicework1").style.display = "none";
         document.getElementById("tryagain1").style.display = "none";
 
-        // Restore legend for each new question
-        document.getElementById("key1").style.display = "block";
-        document.getElementById("key2").style.display = "block";
+        // Restore entire legend
+        document.getElementById("legend").style.display = "grid";
 
         // Display first seven statistics
         for (let i = 0; i < textIds.length; i++) {
@@ -111,9 +110,9 @@ function initializeApp() {
                 statLabels[i] + "\n" + dataLists[i][correctIndex];
         }
 
-        // Update only the numerical value of 3P%
+        // Update 3P% value without extra newline
         document.getElementById("threePvalue").innerText =
-            "\n" + threePointList[correctIndex];
+            threePointList[correctIndex];
 
         // Generate four answer choices
         let used = [correctIndex];
@@ -151,8 +150,9 @@ function initializeApp() {
 
     function wrongButton() {
         document.getElementById("tryagain1").style.display = "block";
-        document.getElementById("key1").style.display = "none";
-        document.getElementById("key2").style.display = "none";
+
+        // Hide entire legend, including KEY heading
+        document.getElementById("legend").style.display = "none";
     }
 
     function rightButton() {
@@ -160,8 +160,10 @@ function initializeApp() {
             canClick = false;
 
             document.getElementById("nicework1").style.display = "block";
-            document.getElementById("key1").style.display = "none";
-            document.getElementById("key2").style.display = "none";
+
+            // Hide entire legend
+            document.getElementById("legend").style.display = "none";
+
             document.getElementById("tryagain1").style.display = "none";
 
             setTimeout(() => {
