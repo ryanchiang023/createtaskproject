@@ -59,9 +59,9 @@ body {
     width: 235px; 
     height: 150px; 
     color: rgb(42, 63, 232); 
-    font-size: 25px; 
+    font-size: 23px; 
     left: 40px; 
-    top: 15px; 
+    top: 12px; 
     text-align: center; 
 }
 
@@ -77,53 +77,64 @@ body {
     cursor: pointer;
 }
 
-#player1 { height: 50px; width: 115px; left: 25px; top: 275px; }
-#player2 { height: 45px; width: 115px; left: 175px; top: 275px; }
-#player3 { height: 40px; width: 115px; left: 25px; top: 330px; }
-#player4 { height: 40px; width: 115px; left: 175px; top: 330px; }
+#player1 { height: 48px; width: 115px; left: 25px; top: 270px; }
+#player2 { height: 48px; width: 115px; left: 175px; top: 270px; }
+#player3 { height: 48px; width: 115px; left: 25px; top: 325px; }
+#player4 { height: 48px; width: 115px; left: 175px; top: 325px; }
 
-/* Uniform Uniform Stat Display Grid (All 8 boxes perfectly sized and styled) */
-#MPtext, #PTStext, #TRBtext, #ASTtext, #BLKtext, #STLtext, #FGtext, #3Ptext {
+/* Properly Spaced Stat Grid */
+#MPtext, #PTStext, #TRBtext, #ASTtext, #BLKtext, #STLtext, #FGtext, #threeptext {
     position: absolute !important;
-    height: 45px; 
+    height: 40px; 
     font-size: 11.5px; 
     text-align: center; 
     color: black;
     box-sizing: border-box;
 }
 
-#MPtext  { width: 55px; left: 15px; top: 85px; }
-#PTStext { width: 55px; left: 68px; top: 85px; }
-#TRBtext { width: 55px; left: 121px; top: 85px; }
-#ASTtext { width: 55px; left: 174px; top: 85px; }
-#BLKtext { width: 55px; left: 227px; top: 85px; }
-#STLtext { width: 75px; left: 55px; top: 145px; }
-#FGtext  { width: 75px; left: 130px; top: 145px; }
-#3Ptext  { width: 75px; left: 205px; top: 145px; }
+/* Top Row (5 items) */
+#MPtext  { width: 55px; left: 12px; top: 78px; }
+#PTStext { width: 55px; left: 68px; top: 78px; }
+#TRBtext { width: 55px; left: 124px; top: 78px; }
+#ASTtext { width: 55px; left: 180px; top: 78px; }
+#BLKtext { width: 55px; left: 236px; top: 78px; }
 
-/* Centered Bold Legend Keys */
+/* Bottom Row (3 centered items) */
+#STLtext { width: 75px; left: 45px; top: 132px; }
+#FGtext  { width: 75px; left: 122px; top: 132px; }
+#threeptext { width: 75px; left: 199px; top: 132px; }
+
+/* Centered Key Title & Balanced Dual Columns */
+#key-title {
+    position: absolute !important;
+    width: 320px;
+    left: 0px;
+    top: 382px;
+    font-size: 10px;
+    text-align: center;
+    color: #333;
+}
+
 #key1 { 
     position: absolute !important; 
-    width: 145px; 
-    height: 85px; 
-    font-size: 9px; 
-    left: 15px; 
-    top: 385px; 
+    width: 140px; 
+    font-size: 8.5px; 
+    left: 20px; 
+    top: 397px; 
     color: #333; 
-    line-height: 1.25;
-    text-align: center;
+    line-height: 1.2;
+    text-align: left;
 }
 
 #key2 { 
     position: absolute !important; 
-    width: 155px; 
-    height: 85px; 
-    font-size: 9px; 
-    left: 160px; 
-    top: 385px; 
+    width: 140px; 
+    font-size: 8.5px; 
+    left: 165px; 
+    top: 397px; 
     color: #333; 
-    line-height: 1.25;
-    text-align: center;
+    line-height: 1.2;
+    text-align: left;
 }
 
 /* Feedback Messages & Next Button */
@@ -132,7 +143,7 @@ body {
     width: 200px;
     height: 100px;
     left: 60px;
-    top: 395px;
+    top: 390px;
     font-size: 25px;
     text-align: center;
     color: black;
@@ -143,7 +154,7 @@ body {
     width: 235px;
     height: 100px;
     left: 45px;
-    top: 395px;
+    top: 390px;
     font-size: 30px;
     text-align: center;
     color: black;
@@ -151,16 +162,16 @@ body {
 
 #next1 {
     position: absolute !important;
-    height: 40px;
+    height: 38px;
     width: 100px;
-    left: 105px;
-    top: 400px;
+    left: 110px;
+    top: 395px;
     background-color: rgb(173, 171, 239);
     color: white;
     border: 1px solid rgb(77, 87, 95);
     border-radius: 4px;
     font-family: Georgia, serif;
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
 }
 
@@ -172,7 +183,7 @@ body {
     color: blue; 
     font-size: 50px; 
     left: 0px; 
-    top: 95px; 
+    top: 85px; 
     text-align: center; 
 }
 
@@ -181,6 +192,6 @@ body {
     width: 220px; 
     position: absolute !important; 
     left: 50px; 
-    top: 185px; 
+    top: 175px; 
     object-fit: contain; 
 }
