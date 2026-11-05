@@ -82,7 +82,7 @@ body {
 #player3 { height: 48px; width: 115px; left: 25px; top: 325px; }
 #player4 { height: 48px; width: 115px; left: 175px; top: 325px; }
 
-/* Stat Display Grid (Accurate positioning matching your original layout) */
+/* Stat Display Grid */
 #MPtext, #PTStext, #TRBtext, #ASTtext, #BLKtext, #STLtext, #FGtext, #3Ptext {
     position: absolute !important;
     height: 40px; 
@@ -99,7 +99,7 @@ body {
 #ASTtext { width: 55px; left: 180px; top: 78px; }
 #BLKtext { width: 55px; left: 236px; top: 78px; }
 
-/* Bottom Row (3 items) */
+/* Bottom Row (3 items - 3Ptext properly aligned next to FG%) */
 #STLtext { width: 75px; left: 45px; top: 132px; }
 #FGtext  { width: 75px; left: 122px; top: 132px; }
 #3Ptext  { width: 75px; left: 199px; top: 132px; }
