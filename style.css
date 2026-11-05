@@ -160,7 +160,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 350px;
+    top: 357px;
     width: 290px;
     display: grid;
     grid-template-columns: 1fr 1fr;
