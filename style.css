@@ -65,7 +65,7 @@ body {
     text-align: center; 
 }
 
-/* Player Choice Buttons */
+/* Player Choice Buttons (4-button layout grid) */
 #player1, #player2, #player3, #player4 {
     position: absolute !important;
     background-color: rgb(183, 178, 251); 
@@ -82,16 +82,16 @@ body {
 #player3 { height: 40px; width: 115px; left: 25px; top: 330px; }
 #player4 { height: 40px; width: 115px; left: 175px; top: 330px; }
 
-/* Stat Display Grid (Cleanly aligned top and bottom rows) */
-#MPtext  { position: absolute !important; width: 55px; height: 50px; font-size: 11.5px; left: 15px; top: 85px; text-align: center; color: black; }
-#PTStext { position: absolute !important; width: 55px; height: 50px; font-size: 11.5px; left: 70px; top: 85px; text-align: center; color: black; }
-#TRBtext { position: absolute !important; width: 55px; height: 50px; font-size: 11.5px; left: 125px; top: 85px; text-align: center; color: black; }
-#ASTtext { position: absolute !important; width: 55px; height: 50px; font-size: 11.5px; left: 180px; top: 85px; text-align: center; color: black; }
-#BLKtext { position: absolute !important; width: 55px; height: 50px; font-size: 11.5px; left: 235px; top: 85px; text-align: center; color: black; }
+/* Stat Display Grid (4 on top, 4 on bottom, evenly spaced) */
+#MPtext  { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 15px; top: 85px; text-align: center; color: black; }
+#PTStext { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 74px; top: 85px; text-align: center; color: black; }
+#TRBtext { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 133px; top: 85px; text-align: center; color: black; }
+#ASTtext { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 192px; top: 85px; text-align: center; color: black; }
 
-#STLtext { position: absolute !important; width: 75px; height: 50px; font-size: 12px; left: 50px; top: 152px; text-align: center; color: black; }
-#FGtext  { position: absolute !important; width: 75px; height: 50px; font-size: 12px; left: 125px; top: 152px; text-align: center; color: black; }
-#3Ptext  { position: absolute !important; width: 75px; height: 50px; font-size: 12px; left: 200px; top: 152px; text-align: center; color: black; }
+#BLKtext { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 25px; top: 152px; text-align: center; color: black; }
+#STLtext { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 95px; top: 152px; text-align: center; color: black; }
+#FGtext  { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 165px; top: 152px; text-align: center; color: black; }
+#3Ptext  { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 235px; top: 152px; text-align: center; color: black; }
 
 /* Legend Key Positioning */
 #key1 { 
