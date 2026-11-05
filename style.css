@@ -1,14 +1,15 @@
+
 body {
     background-color: #222;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     font-family: Georgia, serif;
 }
 
-/* Base screen container with 1.5x zoom scaling */
+/* Base screen container */
 .screen {
     width: 320px;
     height: 450px;
@@ -21,55 +22,55 @@ body {
     transform-origin: center center;
 }
 
-/* Force absolute positioning for all app elements */
+/* Text positioning */
 .textArea {
     position: absolute !important;
     box-sizing: border-box;
     font-family: Georgia, serif;
 }
 
-/* SCREEN 1: HOME */
-#text_area1 { 
-    width: 265px; 
-    height: 195px; 
-    color: rgb(36, 36, 239); 
-    font-size: 25px; 
-    left: 25px; 
-    top: 110px; 
-    text-align: center; 
+/* HOME SCREEN */
+#text_area1 {
+    width: 265px;
+    height: 195px;
+    color: rgb(36, 36, 239);
+    font-size: 25px;
+    left: 25px;
+    top: 110px;
+    text-align: center;
 }
 
-#startButton { 
+#startButton {
     position: absolute !important;
-    height: 40px; 
-    width: 100px; 
-    background-color: rgb(188, 195, 247); 
-    color: rgb(41, 32, 183); 
+    height: 40px;
+    width: 100px;
+    background-color: rgb(188, 195, 247);
+    color: rgb(41, 32, 183);
     border: 1px solid rgb(77, 87, 95);
-    border-radius: 4px; 
+    border-radius: 4px;
     font-family: Georgia, serif;
     font-size: 15px;
-    left: 105px; 
-    top: 275px; 
+    left: 105px;
+    top: 275px;
     cursor: pointer;
 }
 
-/* SCREEN 2: QUESTION */
-#text_area2 { 
-    width: 235px; 
-    height: 150px; 
-    color: rgb(42, 63, 232); 
-    font-size: 25px; 
-    left: 40px; 
-    top: 15px; 
-    text-align: center; 
+/* QUESTION SCREEN */
+#text_area2 {
+    width: 235px;
+    height: 150px;
+    color: rgb(42, 63, 232);
+    font-size: 25px;
+    left: 40px;
+    top: 15px;
+    text-align: center;
 }
 
-/* Player Choice Buttons (4-button layout grid) */
+/* Player buttons */
 #player1, #player2, #player3, #player4 {
     position: absolute !important;
-    background-color: rgb(183, 178, 251); 
-    color: white; 
+    background-color: rgb(183, 178, 251);
+    color: white;
     border: 1px solid rgb(77, 87, 95);
     border-radius: 4px;
     font-family: Georgia, serif;
@@ -82,7 +83,7 @@ body {
 #player3 { height: 40px; width: 115px; left: 25px; top: 330px; }
 #player4 { height: 40px; width: 115px; left: 175px; top: 330px; }
 
-/* Stat Display Grid (4 on top, 4 on bottom, evenly spaced) */
+/* Stat display */
 #MPtext  { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 15px; top: 85px; text-align: center; color: black; }
 #PTStext { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 74px; top: 85px; text-align: center; color: black; }
 #TRBtext { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 133px; top: 85px; text-align: center; color: black; }
@@ -91,34 +92,45 @@ body {
 #BLKtext { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 25px; top: 152px; text-align: center; color: black; }
 #STLtext { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 95px; top: 152px; text-align: center; color: black; }
 #FGtext  { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 165px; top: 152px; text-align: center; color: black; }
-#3Ptext  { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 235px; top: 152px; text-align: center; color: black; }
 
-/* Legend Key Positioning */
-#key1 { 
-    position: absolute !important; 
-    width: 145px; 
-    height: 75px; 
-    font-size: 9px; 
-    left: 15px; 
-    top: 385px; 
-    color: #333; 
+/* 3P% label and value */
+#threePtext {
+    position: absolute !important;
+    width: 65px;
+    height: 50px;
+    font-size: 11px;
+    left: 235px;
+    top: 152px;
+    text-align: center;
+    color: black;
+}
+
+/* Legend */
+#key1 {
+    position: absolute !important;
+    width: 145px;
+    height: 75px;
+    font-size: 9px;
+    left: 15px;
+    top: 385px;
+    color: #333;
     line-height: 1.25;
     text-align: left;
 }
 
-#key2 { 
-    position: absolute !important; 
-    width: 155px; 
-    height: 75px; 
-    font-size: 9px; 
-    left: 160px; 
-    top: 385px; 
-    color: #333; 
+#key2 {
+    position: absolute !important;
+    width: 155px;
+    height: 75px;
+    font-size: 9px;
+    left: 160px;
+    top: 385px;
+    color: #333;
     line-height: 1.25;
     text-align: left;
 }
 
-/* Feedback Messages & Next Button */
+/* Feedback */
 #tryagain1 {
     position: absolute !important;
     width: 200px;
@@ -156,23 +168,23 @@ body {
     cursor: pointer;
 }
 
-/* SCREEN 3: END SCREEN */
-#text_area3 { 
+/* END SCREEN */
+#text_area3 {
     position: absolute !important;
-    width: 320px; 
-    height: 85px; 
-    color: blue; 
-    font-size: 50px; 
-    left: 0px; 
-    top: 95px; 
-    text-align: center; 
+    width: 320px;
+    height: 85px;
+    color: blue;
+    font-size: 50px;
+    left: 0px;
+    top: 95px;
+    text-align: center;
 }
 
-#image1 { 
-    height: 180px; 
-    width: 220px; 
-    position: absolute !important; 
-    left: 50px; 
-    top: 185px; 
-    object-fit: contain; 
+#image1 {
+    height: 180px;
+    width: 220px;
+    position: absolute !important;
+    left: 50px;
+    top: 185px;
+    object-fit: contain;
 }
