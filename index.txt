@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Stat Line Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HOME SCREEN -->
+    <div id="home" class="screen">
+        <div id="text_area1" class="textArea">Can you guess these NBA '24-'25 stat lines?</div>
+        <button id="startButton">Start</button>
+    </div>
+
+    <!-- QUESTION SCREEN -->
+    <div id="question1" class="screen" style="display: none;">
+        <div id="text_area2" class="textArea">Whose stat line is this?</div>
+        
+        <!-- Answer Buttons -->
+        <button id="player1">Button</button>
+        <button id="player2">Button</button>
+        <button id="player3">Button</button>
+        <button id="player4">Button</button>
+
+        <!-- Stat Text Displays -->
+        <div id="MPtext" class="textArea">MP</div>
+        <div id="PTStext" class="textArea">PTS</div>
+        <div id="TRBtext" class="textArea">TRB</div>
+        <div id="ASTtext" class="textArea">AST</div>
+        <div id="BLKtext" class="textArea">BLK</div>
+        <div id="STLtext" class="textArea">STL</div>
+        <div id="FGtext" class="textArea">FG%</div>
+        <div id="3Ptext" class="textArea">3P%</div>
+
+        <!-- Keys / Feedback -->
+        <div id="key1" class="textArea">Key:<div>MP: Minutes Played</div><div>PTS: Points</div><div>TRB: Total Rebounds</div><div>AST: Assists</div></div>
+        <div id="key2" class="textArea">BLK: Blocks<div>STL: Steals</div><div>FG%: Field Goal Percentage</div><div>3P%: 3-Point Percentage</div></div>
+        <div id="tryagain1" class="textArea" style="display: none;">Try Again!</div>
+        <div id="nicework1" class="textArea" style="display: none;">Nice Work!</div>
+        <button id="next1" style="display: none;">Next Question</button>
+    </div>
+
+    <!-- END SCREEN -->
+    <div id="end" class="screen" style="display: none;">
+        <div id="text_area3" class="textArea">Good Job!</div>
+        <img id="image1" src="assets/giannis-thumbs-up.jpg" alt="Giannis Thumbs Up">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

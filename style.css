@@ -1,0 +1,47 @@
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Georgia, serif;
+}
+
+.screen {
+    width: 320px;
+    height: 450px;
+    position: relative;
+    background-color: rgb(249, 240, 255);
+    border: 2px solid #ccc;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.textArea {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+/* Specific Element Positioning from Code.org Export */
+#text_area1 { width: 265px; height: 195px; color: rgb(36, 36, 239); font-size: 25px; left: 25px; top: 110px; text-align: center; }
+#startButton { height: 40px; width: 100px; background-color: rgb(188, 195, 247); color: rgb(41, 32, 183); position: absolute; left: 105px; top: 275px; border-radius: 4px; }
+#text_area2 { width: 235px; height: 150px; color: rgb(42, 63, 232); font-size: 25px; left: 40px; top: 15px; text-align: center; }
+#player1 { height: 50px; width: 115px; background-color: rgb(183, 178, 251); color: white; position: absolute; left: 25px; top: 275px; }
+#player2 { height: 45px; width: 115px; background-color: rgb(183, 178, 251); color: white; position: absolute; left: 175px; top: 275px; }
+#player3 { height: 40px; width: 115px; background-color: rgb(183, 178, 251); color: white; position: absolute; left: 25px; top: 330px; }
+#player4 { height: 40px; width: 115px; background-color: rgb(183, 178, 251); color: white; position: absolute; left: 175px; top: 330px; }
+
+#MPtext { width: 70px; height: 50px; font-size: 13px; left: 15px; top: 85px; text-align: center; }
+#PTStext { width: 70px; height: 50px; font-size: 13px; left: 85px; top: 85px; text-align: center; }
+#TRBtext { width: 70px; height: 50px; font-size: 13px; left: 155px; top: 85px; text-align: center; }
+#ASTtext { width: 70px; height: 50px; font-size: 13px; left: 230px; top: 85px; text-align: center; }
+#BLKtext { width: 70px; height: 50px; font-size: 13px; left: 50px; top: 152px; text-align: center; }
+#STLtext { width: 70px; height: 50px; font-size: 13px; left: 125px; top: 152px; text-align: center; }
+#FGtext { width: 75px; height: 50px; font-size: 13px; left: 201px; top: 152px; text-align: center; }
+#3Ptext { width: 75px; height: 50px; font-size: 13px; left: 125px; top: 215px; text-align: center; }
+
+#key1 { width: 150px; height: 75px; font-size: 10px; left: 0px; top: 380px; }
+#key2 { width: 180px; height: 75px; font-size: 10px; left: 135px; top: 390px; }
+
+#text_area3 { width: 320px; height: 85px; color: blue; font-size: 50px; left: 0px; top: 125px; text-align: center; }
+#image1 { height: 175px; width: 215px; position: absolute; left: 50px; top: 190px; object-fit: contain; }
