@@ -1,4 +1,8 @@
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #222;
     display: flex;
@@ -9,182 +13,233 @@ body {
     font-family: Georgia, serif;
 }
 
-/* Base screen container */
+/* BASE SCREEN */
 .screen {
-    width: 320px;
-    height: 450px;
+    width: 440px;
+    height: 700px;
+    max-width: calc(100vw - 24px);
     position: relative;
     background-color: rgb(249, 240, 255);
     border: 2px solid #ccc;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
     font-family: Georgia, serif;
-    transform: scale(1.5);
-    transform-origin: center center;
-}
-
-/* Text positioning */
-.textArea {
-    position: absolute !important;
-    box-sizing: border-box;
-    font-family: Georgia, serif;
+    overflow: hidden;
 }
 
 /* HOME SCREEN */
 #text_area1 {
-    width: 265px;
-    height: 195px;
+    width: 85%;
+    position: absolute;
+    left: 7.5%;
+    top: 160px;
     color: rgb(36, 36, 239);
-    font-size: 25px;
-    left: 25px;
-    top: 110px;
+    font-size: 30px;
     text-align: center;
+    line-height: 1.5;
 }
 
 #startButton {
-    position: absolute !important;
-    height: 40px;
-    width: 100px;
+    position: absolute;
+    height: 48px;
+    width: 125px;
     background-color: rgb(188, 195, 247);
     color: rgb(41, 32, 183);
     border: 1px solid rgb(77, 87, 95);
-    border-radius: 4px;
+    border-radius: 5px;
     font-family: Georgia, serif;
-    font-size: 15px;
-    left: 105px;
-    top: 275px;
+    font-size: 18px;
+    left: 50%;
+    top: 390px;
+    transform: translateX(-50%);
     cursor: pointer;
 }
 
-/* QUESTION SCREEN */
+/* QUESTION HEADING */
 #text_area2 {
-    width: 235px;
-    height: 150px;
+    position: absolute;
+    width: 100%;
+    top: 35px;
+    left: 0;
     color: rgb(42, 63, 232);
-    font-size: 25px;
-    left: 40px;
-    top: 15px;
+    font-size: 28px;
     text-align: center;
 }
 
-/* Player buttons */
+/* STATISTICS GRID */
+#statGrid {
+    position: absolute;
+    top: 120px;
+    left: 25px;
+    right: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 85px);
+    gap: 12px;
+}
+
+/* INDIVIDUAL STAT CARDS */
+.stat-card {
+    background-color: rgb(231, 226, 250);
+    border: 1px solid rgb(170, 165, 205);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    white-space: pre-line;
+
+    color: rgb(30, 30, 80);
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    min-width: 0;
+    padding: 5px;
+}
+
+/* ANSWER BUTTON GRID */
+#answerGrid {
+    position: absolute;
+    top: 325px;
+    left: 35px;
+    right: 35px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 55px);
+    gap: 15px;
+}
+
+/* PLAYER BUTTONS */
 #player1, #player2, #player3, #player4 {
-    position: absolute !important;
+    width: 100%;
+    height: 100%;
+
     background-color: rgb(183, 178, 251);
     color: white;
+
     border: 1px solid rgb(77, 87, 95);
-    border-radius: 4px;
+    border-radius: 6px;
+
     font-family: Georgia, serif;
-    font-size: 13px;
+    font-size: 15px;
+
     cursor: pointer;
 }
 
-#player1 { height: 50px; width: 115px; left: 25px; top: 275px; }
-#player2 { height: 45px; width: 115px; left: 175px; top: 275px; }
-#player3 { height: 40px; width: 115px; left: 25px; top: 330px; }
-#player4 { height: 40px; width: 115px; left: 175px; top: 330px; }
-
-/* Stat display */
-#MPtext  { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 15px; top: 85px; text-align: center; color: black; }
-#PTStext { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 74px; top: 85px; text-align: center; color: black; }
-#TRBtext { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 133px; top: 85px; text-align: center; color: black; }
-#ASTtext { position: absolute !important; width: 55px; height: 50px; font-size: 11px; left: 192px; top: 85px; text-align: center; color: black; }
-
-#BLKtext { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 25px; top: 152px; text-align: center; color: black; }
-#STLtext { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 95px; top: 152px; text-align: center; color: black; }
-#FGtext  { position: absolute !important; width: 65px; height: 50px; font-size: 11px; left: 165px; top: 152px; text-align: center; color: black; }
-
-/* 3P% label and value */
-#threePtext {
-    position: absolute !important;
-    width: 65px;
-    height: 50px;
-    font-size: 11px;
-    left: 235px;
-    top: 152px;
-    text-align: center;
-    color: black;
+#player1:hover, #player2:hover,
+#player3:hover, #player4:hover {
+    background-color: rgb(145, 138, 235);
 }
 
-/* Legend */
-#key1 {
-    position: absolute !important;
-    width: 145px;
-    height: 75px;
-    font-size: 9px;
-    left: 15px;
-    top: 385px;
-    color: #333;
-    line-height: 1.25;
-    text-align: left;
-}
-
-#key2 {
-    position: absolute !important;
-    width: 155px;
-    height: 75px;
-    font-size: 9px;
-    left: 160px;
-    top: 385px;
-    color: #333;
-    line-height: 1.25;
-    text-align: left;
-}
-
-/* Feedback */
+/* FEEDBACK */
 #tryagain1 {
-    position: absolute !important;
-    width: 200px;
-    height: 100px;
-    left: 60px;
-    top: 395px;
-    font-size: 25px;
+    position: absolute;
+    width: 100%;
+    top: 465px;
+    left: 0;
+
+    font-size: 27px;
     text-align: center;
     color: black;
 }
 
 #nicework1 {
-    position: absolute !important;
-    width: 235px;
-    height: 100px;
-    left: 45px;
-    top: 395px;
+    position: absolute;
+    width: 100%;
+    top: 465px;
+    left: 0;
+
     font-size: 30px;
     text-align: center;
     color: black;
 }
 
-#next1 {
-    position: absolute !important;
-    height: 40px;
-    width: 100px;
-    left: 105px;
-    top: 400px;
-    background-color: rgb(173, 171, 239);
-    color: white;
-    border: 1px solid rgb(77, 87, 95);
-    border-radius: 4px;
-    font-family: Georgia, serif;
-    font-size: 15px;
-    cursor: pointer;
+/* LEGEND CONTAINER */
+#legend {
+    position: absolute;
+    top: 545px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 12px;
+
+    color: #333;
+}
+
+/* KEY TITLE CENTERED ACROSS BOTH COLUMNS */
+#legendTitle {
+    grid-column: 1 / 3;
+
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* LEGEND COLUMNS */
+#key1, #key2 {
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: left;
 }
 
 /* END SCREEN */
 #text_area3 {
-    position: absolute !important;
-    width: 320px;
-    height: 85px;
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    left: 0;
+
     color: blue;
     font-size: 50px;
-    left: 0px;
-    top: 95px;
     text-align: center;
 }
 
 #image1 {
-    height: 180px;
-    width: 220px;
-    position: absolute !important;
-    left: 50px;
-    top: 185px;
+    height: 250px;
+    width: 280px;
+
+    position: absolute;
+    left: 50%;
+    top: 270px;
+
+    transform: translateX(-50%);
     object-fit: contain;
+}
+
+/* SMALLER SCREENS */
+@media (max-width: 400px) {
+    #statGrid {
+        left: 12px;
+        right: 12px;
+        gap: 7px;
+    }
+
+    .stat-card {
+        font-size: 14px;
+    }
+
+    #answerGrid {
+        left: 18px;
+        right: 18px;
+        gap: 10px;
+    }
+
+    #legend {
+        width: 90%;
+        column-gap: 10px;
+    }
+
+    #key1, #key2 {
+        font-size: 11px;
+    }
 }

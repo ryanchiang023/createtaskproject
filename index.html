@@ -11,64 +11,80 @@
 
     <!-- HOME SCREEN -->
     <div id="home" class="screen">
-        <div id="text_area1" class="textArea">Can you guess these NBA '24-'25 stat lines?</div>
+        <div id="text_area1">
+            Can you guess these NBA '24-'25 stat lines?
+        </div>
         <button id="startButton">Start</button>
     </div>
 
     <!-- QUESTION SCREEN -->
     <div id="question1" class="screen" style="display: none;">
-        <div id="text_area2" class="textArea">Whose stat line is this?</div>
 
-        <!-- Answer Buttons -->
-        <button id="player1">Button</button>
-        <button id="player2">Button</button>
-        <button id="player3">Button</button>
-        <button id="player4">Button</button>
+        <div id="text_area2">Whose stat line is this?</div>
 
-        <!-- Stat Display -->
-        <div id="MPtext" class="textArea">MP</div>
-        <div id="PTStext" class="textArea">PTS</div>
-        <div id="TRBtext" class="textArea">TRB</div>
-        <div id="ASTtext" class="textArea">AST</div>
-        <div id="BLKtext" class="textArea">BLK</div>
-        <div id="STLtext" class="textArea">STL</div>
-        <div id="FGtext" class="textArea">FG%</div>
+        <!-- STATISTICS GRID: 4 COLUMNS x 2 ROWS -->
+        <div id="statGrid">
 
-        <!-- 3P% label stays separate from its changing value -->
-        <div id="threePtext" class="textArea">
-            3P%
-            <span id="threePvalue"></span>
+            <div id="MPtext" class="stat-card">MP</div>
+            <div id="PTStext" class="stat-card">PTS</div>
+            <div id="TRBtext" class="stat-card">TRB</div>
+            <div id="ASTtext" class="stat-card">AST</div>
+
+            <div id="BLKtext" class="stat-card">BLK</div>
+            <div id="STLtext" class="stat-card">STL</div>
+            <div id="FGtext" class="stat-card">FG%</div>
+
+            <div id="threePtext" class="stat-card">
+                3P%
+                <span id="threePvalue"></span>
+            </div>
+
         </div>
 
-        <!-- Legend -->
-        <div id="key1" class="textArea">
-            <div style="text-align: center; font-weight: bold;">Key:</div>
-            MP: Minutes Played<br>
-            PTS: Points<br>
-            TRB: Total Rebounds<br>
-            AST: Assists
+        <!-- ANSWER BUTTONS -->
+        <div id="answerGrid">
+            <button id="player1">Button</button>
+            <button id="player2">Button</button>
+            <button id="player3">Button</button>
+            <button id="player4">Button</button>
         </div>
 
-        <div id="key2" class="textArea">
-            <br>
-            BLK: Blocks<br>
-            STL: Steals<br>
-            FG%: Field Goal %<br>
-            3P%: 3-Point %
+        <!-- FEEDBACK -->
+        <div id="tryagain1" style="display: none;">Try Again!</div>
+        <div id="nicework1" style="display: none;">Nice Work!</div>
+
+        <!-- CENTERED LEGEND -->
+        <div id="legend">
+
+            <div id="legendTitle">KEY:</div>
+
+            <div id="key1">
+                MP: Minutes Played<br>
+                PTS: Points<br>
+                TRB: Total Rebounds<br>
+                AST: Assists
+            </div>
+
+            <div id="key2">
+                BLK: Blocks<br>
+                STL: Steals<br>
+                FG%: Field Goal %<br>
+                3P%: 3-Point %
+            </div>
+
         </div>
 
-        <!-- Feedback -->
-        <div id="tryagain1" class="textArea" style="display: none;">Try Again!</div>
-        <div id="nicework1" class="textArea" style="display: none;">Nice Work!</div>
-        <button id="next1" style="display: none;">Next Question</button>
     </div>
 
     <!-- END SCREEN -->
     <div id="end" class="screen" style="display: none;">
-        <div id="text_area3" class="textArea">Good Job!</div>
-        <img id="image1" src="assets/giannis-thumbs-up.jpg" alt="Giannis Thumbs Up">
+        <div id="text_area3">Good Job!</div>
+        <img id="image1"
+             src="assets/giannis-thumbs-up.jpg"
+             alt="Giannis Thumbs Up">
     </div>
 
     <script src="app.js"></script>
+
 </body>
 </html>
