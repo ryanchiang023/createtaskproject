@@ -82,8 +82,8 @@ body {
 #player3 { height: 48px; width: 115px; left: 25px; top: 325px; }
 #player4 { height: 48px; width: 115px; left: 175px; top: 325px; }
 
-/* Properly Spaced Stat Grid */
-#MPtext, #PTStext, #TRBtext, #ASTtext, #BLKtext, #STLtext, #FGtext, #threeptext {
+/* Perfectly Spaced Stat Grid */
+#MPtext, #PTStext, #TRBtext, #ASTtext, #BLKtext, #STLtext, #FGtext, #3Ptext {
     position: absolute !important;
     height: 40px; 
     font-size: 11.5px; 
@@ -99,10 +99,10 @@ body {
 #ASTtext { width: 55px; left: 180px; top: 78px; }
 #BLKtext { width: 55px; left: 236px; top: 78px; }
 
-/* Bottom Row (3 centered items) */
+/* Bottom Row (3 items, with 3Ptext matching FGtext position) */
 #STLtext { width: 75px; left: 45px; top: 132px; }
 #FGtext  { width: 75px; left: 122px; top: 132px; }
-#threeptext { width: 75px; left: 199px; top: 132px; }
+#3Ptext  { width: 75px; left: 199px; top: 132px; }
 
 /* Centered Key Title & Balanced Dual Columns */
 #key-title {
@@ -118,7 +118,7 @@ body {
 #key1 { 
     position: absolute !important; 
     width: 140px; 
-    font-size: 8.5px; 
+    font-size: 8px; 
     left: 20px; 
     top: 397px; 
     color: #333; 
@@ -129,7 +129,7 @@ body {
 #key2 { 
     position: absolute !important; 
     width: 140px; 
-    font-size: 8.5px; 
+    font-size: 8px; 
     left: 165px; 
     top: 397px; 
     color: #333; 
@@ -141,10 +141,10 @@ body {
 #tryagain1 {
     position: absolute !important;
     width: 200px;
-    height: 100px;
+    height: 50px;
     left: 60px;
-    top: 390px;
-    font-size: 25px;
+    top: 380px;
+    font-size: 22px;
     text-align: center;
     color: black;
 }
@@ -152,26 +152,26 @@ body {
 #nicework1 {
     position: absolute !important;
     width: 235px;
-    height: 100px;
+    height: 50px;
     left: 45px;
-    top: 390px;
-    font-size: 30px;
+    top: 380px;
+    font-size: 26px;
     text-align: center;
     color: black;
 }
 
 #next1 {
     position: absolute !important;
-    height: 38px;
+    height: 35px;
     width: 100px;
     left: 110px;
-    top: 395px;
+    top: 410px;
     background-color: rgb(173, 171, 239);
     color: white;
     border: 1px solid rgb(77, 87, 95);
     border-radius: 4px;
     font-family: Georgia, serif;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
 }
 
