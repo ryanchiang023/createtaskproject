@@ -8,40 +8,149 @@ body {
     font-family: Georgia, serif;
 }
 
+/* Base screen container with 1.5x zoom scaling */
 .screen {
     width: 320px;
     height: 450px;
     position: relative;
     background-color: rgb(249, 240, 255);
     border: 2px solid #ccc;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    font-family: Georgia, serif;
+    transform: scale(1.5);
+    transform-origin: center center;
 }
 
+/* Force absolute positioning for all app elements */
 .textArea {
-    position: absolute;
+    position: absolute !important;
     box-sizing: border-box;
+    font-family: Georgia, serif;
 }
 
-/* Specific Element Positioning from Code.org Export */
-#text_area1 { width: 265px; height: 195px; color: rgb(36, 36, 239); font-size: 25px; left: 25px; top: 110px; text-align: center; }
-#startButton { height: 40px; width: 100px; background-color: rgb(188, 195, 247); color: rgb(41, 32, 183); position: absolute; left: 105px; top: 275px; border-radius: 4px; }
-#text_area2 { width: 235px; height: 150px; color: rgb(42, 63, 232); font-size: 25px; left: 40px; top: 15px; text-align: center; }
-#player1 { height: 50px; width: 115px; background-color: rgb(183, 178, 251); color: white; position: absolute; left: 25px; top: 275px; }
-#player2 { height: 45px; width: 115px; background-color: rgb(183, 178, 251); color: white; position: absolute; left: 175px; top: 275px; }
-#player3 { height: 40px; width: 115px; background-color: rgb(183, 178, 251); color: white; position: absolute; left: 25px; top: 330px; }
-#player4 { height: 40px; width: 115px; background-color: rgb(183, 178, 251); color: white; position: absolute; left: 175px; top: 330px; }
+/* SCREEN 1: HOME */
+#text_area1 { 
+    width: 265px; 
+    height: 195px; 
+    color: rgb(36, 36, 239); 
+    font-size: 25px; 
+    left: 25px; 
+    top: 110px; 
+    text-align: center; 
+}
 
-#MPtext { width: 70px; height: 50px; font-size: 13px; left: 15px; top: 85px; text-align: center; }
-#PTStext { width: 70px; height: 50px; font-size: 13px; left: 85px; top: 85px; text-align: center; }
-#TRBtext { width: 70px; height: 50px; font-size: 13px; left: 155px; top: 85px; text-align: center; }
-#ASTtext { width: 70px; height: 50px; font-size: 13px; left: 230px; top: 85px; text-align: center; }
-#BLKtext { width: 70px; height: 50px; font-size: 13px; left: 50px; top: 152px; text-align: center; }
-#STLtext { width: 70px; height: 50px; font-size: 13px; left: 125px; top: 152px; text-align: center; }
-#FGtext { width: 75px; height: 50px; font-size: 13px; left: 201px; top: 152px; text-align: center; }
-#3Ptext { width: 75px; height: 50px; font-size: 13px; left: 125px; top: 215px; text-align: center; }
+#startButton { 
+    position: absolute !important;
+    height: 40px; 
+    width: 100px; 
+    background-color: rgb(188, 195, 247); 
+    color: rgb(41, 32, 183); 
+    border: 1px solid rgb(77, 87, 95);
+    border-radius: 4px; 
+    font-family: Georgia, serif;
+    font-size: 15px;
+    left: 105px; 
+    top: 275px; 
+    cursor: pointer;
+}
 
-#key1 { width: 150px; height: 75px; font-size: 10px; left: 0px; top: 380px; }
-#key2 { width: 180px; height: 75px; font-size: 10px; left: 135px; top: 390px; }
+/* SCREEN 2: QUESTION */
+#text_area2 { 
+    width: 235px; 
+    height: 150px; 
+    color: rgb(42, 63, 232); 
+    font-size: 25px; 
+    left: 40px; 
+    top: 15px; 
+    text-align: center; 
+}
 
-#text_area3 { width: 320px; height: 85px; color: blue; font-size: 50px; left: 0px; top: 125px; text-align: center; }
-#image1 { height: 175px; width: 215px; position: absolute; left: 50px; top: 190px; object-fit: contain; }
+/* Player Choice Buttons */
+#player1, #player2, #player3, #player4 {
+    position: absolute !important;
+    background-color: rgb(183, 178, 251); 
+    color: white; 
+    border: 1px solid rgb(77, 87, 95);
+    border-radius: 4px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#player1 { height: 50px; width: 115px; left: 25px; top: 275px; }
+#player2 { height: 45px; width: 115px; left: 175px; top: 275px; }
+#player3 { height: 40px; width: 115px; left: 25px; top: 330px; }
+#player4 { height: 40px; width: 115px; left: 175px; top: 330px; }
+
+/* Stat Display Box Grid */
+#MPtext  { position: absolute !important; width: 70px; height: 50px; font-size: 13px; left: 15px; top: 85px; text-align: center; color: black; }
+#PTStext { position: absolute !important; width: 70px; height: 50px; font-size: 13px; left: 85px; top: 85px; text-align: center; color: black; }
+#TRBtext { position: absolute !important; width: 70px; height: 50px; font-size: 13px; left: 155px; top: 85px; text-align: center; color: black; }
+#ASTtext { position: absolute !important; width: 70px; height: 50px; font-size: 13px; left: 230px; top: 85px; text-align: center; color: black; }
+#BLKtext { position: absolute !important; width: 70px; height: 50px; font-size: 13px; left: 50px; top: 152px; text-align: center; color: black; }
+#STLtext { position: absolute !important; width: 70px; height: 50px; font-size: 13px; left: 125px; top: 152px; text-align: center; color: black; }
+#FGtext  { position: absolute !important; width: 75px; height: 50px; font-size: 13px; left: 201px; top: 152px; text-align: center; color: black; }
+#3Ptext  { position: absolute !important; width: 75px; height: 50px; font-size: 13px; left: 125px; top: 215px; text-align: center; color: black; }
+
+/* Legend Key Box Positioning */
+#key1 { position: absolute !important; width: 150px; height: 75px; font-size: 10px; left: 0px; top: 380px; color: black; }
+#key2 { position: absolute !important; width: 180px; height: 75px; font-size: 10px; left: 135px; top: 390px; color: black; }
+
+/* Feedback Messages & Next Button */
+#tryagain1 {
+    position: absolute !important;
+    width: 200px;
+    height: 100px;
+    left: 60px;
+    top: 395px;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+#nicework1 {
+    position: absolute !important;
+    width: 235px;
+    height: 100px;
+    left: 45px;
+    top: 395px;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+
+#next1 {
+    position: absolute !important;
+    height: 40px;
+    width: 100px;
+    left: 105px;
+    top: 400px;
+    background-color: rgb(173, 171, 239);
+    color: white;
+    border: 1px solid rgb(77, 87, 95);
+    border-radius: 4px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* SCREEN 3: END SCREEN */
+#text_area3 { 
+    position: absolute !important;
+    width: 320px; 
+    height: 85px; 
+    color: blue; 
+    font-size: 50px; 
+    left: 0px; 
+    top: 125px; 
+    text-align: center; 
+}
+
+#image1 { 
+    height: 175px; 
+    width: 215px; 
+    position: absolute !important; 
+    left: 50px; 
+    top: 190px; 
+    object-fit: contain; 
+}
