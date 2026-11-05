@@ -24,7 +24,7 @@
         <button id="player3">Button</button>
         <button id="player4">Button</button>
 
-        <!-- Stat Display Grid -->
+        <!-- Stat Display Grid (4 on top, 4 on bottom, using your exact original IDs) -->
         <div id="MPtext" class="textArea">MP</div>
         <div id="PTStext" class="textArea">PTS</div>
         <div id="TRBtext" class="textArea">TRB</div>
@@ -34,14 +34,14 @@
         <div id="FGtext" class="textArea">FG%</div>
         <div id="3Ptext" class="textArea">3P%</div>
 
-        <!-- Legend Key Block -->
+        <!-- Legend Key Block (Properly proportioned and centered) -->
         <div id="key-container" class="textArea">
-            <div style="text-align: center; font-weight: bold; margin-bottom: 2px;">Key:</div>
-            <div style="display: flex; justify-content: space-between;">
-                <div style="text-align: left; width: 48%;">
+            <div id="key-title"><b>Key:</b></div>
+            <div id="key-columns">
+                <div class="key-col">
                     MP: Min Played<br>PTS: Points<br>TRB: Rebounds<br>AST: Assists
                 </div>
-                <div style="text-align: left; width: 48%;">
+                <div class="key-col">
                     BLK: Blocks<br>STL: Steals<br>FG%: FG %<br>3P%: 3P %
                 </div>
             </div>

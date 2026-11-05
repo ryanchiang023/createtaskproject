@@ -82,38 +82,55 @@ body {
 #player3 { height: 48px; width: 115px; left: 25px; top: 325px; }
 #player4 { height: 48px; width: 115px; left: 175px; top: 325px; }
 
-/* Stat Display Grid */
+/* Perfectly Even 4x2 Stat Grid Spacing */
 #MPtext, #PTStext, #TRBtext, #ASTtext, #BLKtext, #STLtext, #FGtext, #3Ptext {
     position: absolute !important;
-    height: 40px; 
-    font-size: 11px; 
+    height: 38px; 
+    width: 68px;
+    font-size: 11.5px; 
     text-align: center; 
     color: black;
     box-sizing: border-box;
 }
 
-/* Top Row (5 items) */
-#MPtext  { width: 55px; left: 12px; top: 78px; }
-#PTStext { width: 55px; left: 68px; top: 78px; }
-#TRBtext { width: 55px; left: 124px; top: 78px; }
-#ASTtext { width: 55px; left: 180px; top: 78px; }
-#BLKtext { width: 55px; left: 236px; top: 78px; }
+/* Top Row (4 items evenly spaced) */
+#MPtext  { left: 16px; top: 78px; }
+#PTStext { left: 90px; top: 78px; }
+#TRBtext { left: 162px; top: 78px; }
+#ASTtext { left: 236px; top: 78px; }
 
-/* Bottom Row (3 items - 3Ptext properly aligned next to FG%) */
-#STLtext { width: 75px; left: 45px; top: 132px; }
-#FGtext  { width: 75px; left: 122px; top: 132px; }
-#3Ptext  { width: 75px; left: 199px; top: 132px; }
+/* Bottom Row (4 items evenly spaced) */
+#BLKtext { left: 16px; top: 125px; }
+#STLtext { left: 90px; top: 125px; }
+#FGtext  { left: 162px; top: 125px; }
+#3Ptext  { left: 236px; top: 125px; }
 
-/* Unified Key Container Box */
+/* Properly Sized and Centered Key Container */
 #key-container {
     position: absolute !important;
-    width: 260px;
-    height: 65px;
-    left: 30px;
+    width: 280px;
+    height: 75px;
+    left: 20px;
     top: 380px;
-    font-size: 8.5px;
+    font-size: 9.5px;
     color: #333;
-    line-height: 1.25;
+    line-height: 1.3;
+}
+
+#key-title {
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+#key-columns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.key-col {
+    text-align: left;
+    width: 46%;
 }
 
 /* Feedback Messages & Next Button */
