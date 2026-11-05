@@ -1,8 +1,4 @@
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: #222;
     display: flex;
@@ -13,233 +9,229 @@ body {
     font-family: Georgia, serif;
 }
 
-/* BASE SCREEN */
+/* Base screen container */
 .screen {
-    width: 440px;
-    height: 700px;
-    max-width: calc(100vw - 24px);
+    width: 320px;
+    height: 450px;
     position: relative;
     background-color: rgb(249, 240, 255);
     border: 2px solid #ccc;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
     font-family: Georgia, serif;
-    overflow: hidden;
+    transform: scale(1.5);
+    transform-origin: center center;
+}
+
+/* Text positioning */
+.textArea {
+    position: absolute !important;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
 }
 
 /* HOME SCREEN */
 #text_area1 {
-    width: 85%;
-    position: absolute;
-    left: 7.5%;
-    top: 160px;
+    width: 265px;
+    height: 195px;
     color: rgb(36, 36, 239);
-    font-size: 30px;
+    font-size: 25px;
+    left: 25px;
+    top: 110px;
     text-align: center;
-    line-height: 1.5;
 }
 
 #startButton {
-    position: absolute;
-    height: 48px;
-    width: 125px;
+    position: absolute !important;
+    height: 40px;
+    width: 100px;
     background-color: rgb(188, 195, 247);
     color: rgb(41, 32, 183);
     border: 1px solid rgb(77, 87, 95);
-    border-radius: 5px;
+    border-radius: 4px;
     font-family: Georgia, serif;
-    font-size: 18px;
-    left: 50%;
-    top: 390px;
-    transform: translateX(-50%);
+    font-size: 15px;
+    left: 105px;
+    top: 275px;
     cursor: pointer;
 }
 
-/* QUESTION HEADING */
+/* QUESTION SCREEN */
 #text_area2 {
-    position: absolute;
-    width: 100%;
-    top: 35px;
-    left: 0;
+    width: 235px;
+    height: 150px;
     color: rgb(42, 63, 232);
-    font-size: 28px;
+    font-size: 25px;
+    left: 40px;
+    top: 15px;
     text-align: center;
 }
 
 /* STATISTICS GRID */
 #statGrid {
     position: absolute;
-    top: 120px;
-    left: 25px;
-    right: 25px;
+    left: 15px;
+    top: 85px;
+    width: 290px;
 
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(2, 85px);
-    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 55px);
+    gap: 10px;
+
+    box-sizing: border-box;
 }
 
-/* INDIVIDUAL STAT CARDS */
-.stat-card {
-    background-color: rgb(231, 226, 250);
-    border: 1px solid rgb(170, 165, 205);
-    border-radius: 8px;
+/* INDIVIDUAL STATISTICS */
+.statArea {
+    position: relative;
+    width: 100%;
+    height: 55px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    line-height: 1.4;
     text-align: center;
-    white-space: pre-line;
-
-    color: rgb(30, 30, 80);
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 1.5;
-
-    min-width: 0;
-    padding: 5px;
+    color: black;
 }
 
-/* ANSWER BUTTON GRID */
-#answerGrid {
-    position: absolute;
-    top: 325px;
-    left: 35px;
-    right: 35px;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, 55px);
-    gap: 15px;
+/* 3P% VALUE */
+#threePtext {
+    font-size: 13px;
 }
 
-/* PLAYER BUTTONS */
+/* Player buttons - ORIGINAL POSITIONS */
 #player1, #player2, #player3, #player4 {
-    width: 100%;
-    height: 100%;
-
+    position: absolute !important;
     background-color: rgb(183, 178, 251);
     color: white;
-
     border: 1px solid rgb(77, 87, 95);
-    border-radius: 6px;
-
+    border-radius: 4px;
     font-family: Georgia, serif;
-    font-size: 15px;
-
+    font-size: 13px;
     cursor: pointer;
 }
 
-#player1:hover, #player2:hover,
-#player3:hover, #player4:hover {
-    background-color: rgb(145, 138, 235);
+#player1 {
+    height: 50px;
+    width: 115px;
+    left: 25px;
+    top: 275px;
 }
 
-/* FEEDBACK */
-#tryagain1 {
-    position: absolute;
-    width: 100%;
-    top: 465px;
-    left: 0;
-
-    font-size: 27px;
-    text-align: center;
-    color: black;
+#player2 {
+    height: 45px;
+    width: 115px;
+    left: 175px;
+    top: 275px;
 }
 
-#nicework1 {
-    position: absolute;
-    width: 100%;
-    top: 465px;
-    left: 0;
+#player3 {
+    height: 40px;
+    width: 115px;
+    left: 25px;
+    top: 330px;
+}
 
-    font-size: 30px;
-    text-align: center;
-    color: black;
+#player4 {
+    height: 40px;
+    width: 115px;
+    left: 175px;
+    top: 330px;
 }
 
 /* LEGEND CONTAINER */
 #legend {
     position: absolute;
-    top: 545px;
     left: 50%;
     transform: translateX(-50%);
+    top: 385px;
 
-    width: 80%;
+    width: 290px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 15px;
-    row-gap: 12px;
+    column-gap: 10px;
+    row-gap: 5px;
 
     color: #333;
 }
 
-/* KEY TITLE CENTERED ACROSS BOTH COLUMNS */
+/* CENTERED KEY HEADING */
 #legendTitle {
     grid-column: 1 / 3;
-
     text-align: center;
-    font-size: 17px;
+    font-size: 11px;
     font-weight: bold;
 }
 
-/* LEGEND COLUMNS */
-#key1, #key2 {
-    font-size: 13px;
-    line-height: 1.8;
-    text-align: left;
+/* TWO LEGEND COLUMNS */
+.legendColumn {
+    font-size: 9px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* FEEDBACK */
+#tryagain1 {
+    position: absolute !important;
+    width: 200px;
+    height: 100px;
+    left: 60px;
+    top: 395px;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+#nicework1 {
+    position: absolute !important;
+    width: 235px;
+    height: 100px;
+    left: 45px;
+    top: 395px;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+
+#next1 {
+    position: absolute !important;
+    height: 40px;
+    width: 100px;
+    left: 105px;
+    top: 400px;
+    background-color: rgb(173, 171, 239);
+    color: white;
+    border: 1px solid rgb(77, 87, 95);
+    border-radius: 4px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 /* END SCREEN */
 #text_area3 {
-    position: absolute;
-    width: 100%;
-    top: 130px;
-    left: 0;
-
+    position: absolute !important;
+    width: 320px;
+    height: 85px;
     color: blue;
     font-size: 50px;
+    left: 0px;
+    top: 95px;
     text-align: center;
 }
 
 #image1 {
-    height: 250px;
-    width: 280px;
-
-    position: absolute;
-    left: 50%;
-    top: 270px;
-
-    transform: translateX(-50%);
+    height: 180px;
+    width: 220px;
+    position: absolute !important;
+    left: 50px;
+    top: 185px;
     object-fit: contain;
-}
-
-/* SMALLER SCREENS */
-@media (max-width: 400px) {
-    #statGrid {
-        left: 12px;
-        right: 12px;
-        gap: 7px;
-    }
-
-    .stat-card {
-        font-size: 14px;
-    }
-
-    #answerGrid {
-        left: 18px;
-        right: 18px;
-        gap: 10px;
-    }
-
-    #legend {
-        width: 90%;
-        column-gap: 10px;
-    }
-
-    #key1, #key2 {
-        font-size: 11px;
-    }
 }

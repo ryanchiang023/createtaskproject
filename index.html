@@ -11,7 +11,7 @@
 
     <!-- HOME SCREEN -->
     <div id="home" class="screen">
-        <div id="text_area1">
+        <div id="text_area1" class="textArea">
             Can you guess these NBA '24-'25 stat lines?
         </div>
         <button id="startButton">Start</button>
@@ -20,21 +20,23 @@
     <!-- QUESTION SCREEN -->
     <div id="question1" class="screen" style="display: none;">
 
-        <div id="text_area2">Whose stat line is this?</div>
+        <div id="text_area2" class="textArea">
+            Whose stat line is this?
+        </div>
 
         <!-- STATISTICS GRID: 4 COLUMNS x 2 ROWS -->
         <div id="statGrid">
 
-            <div id="MPtext" class="stat-card">MP</div>
-            <div id="PTStext" class="stat-card">PTS</div>
-            <div id="TRBtext" class="stat-card">TRB</div>
-            <div id="ASTtext" class="stat-card">AST</div>
+            <div id="MPtext" class="statArea">MP</div>
+            <div id="PTStext" class="statArea">PTS</div>
+            <div id="TRBtext" class="statArea">TRB</div>
+            <div id="ASTtext" class="statArea">AST</div>
 
-            <div id="BLKtext" class="stat-card">BLK</div>
-            <div id="STLtext" class="stat-card">STL</div>
-            <div id="FGtext" class="stat-card">FG%</div>
+            <div id="BLKtext" class="statArea">BLK</div>
+            <div id="STLtext" class="statArea">STL</div>
+            <div id="FGtext" class="statArea">FG%</div>
 
-            <div id="threePtext" class="stat-card">
+            <div id="threePtext" class="statArea">
                 3P%
                 <span id="threePvalue"></span>
             </div>
@@ -42,30 +44,24 @@
         </div>
 
         <!-- ANSWER BUTTONS -->
-        <div id="answerGrid">
-            <button id="player1">Button</button>
-            <button id="player2">Button</button>
-            <button id="player3">Button</button>
-            <button id="player4">Button</button>
-        </div>
+        <button id="player1">Button</button>
+        <button id="player2">Button</button>
+        <button id="player3">Button</button>
+        <button id="player4">Button</button>
 
-        <!-- FEEDBACK -->
-        <div id="tryagain1" style="display: none;">Try Again!</div>
-        <div id="nicework1" style="display: none;">Nice Work!</div>
-
-        <!-- CENTERED LEGEND -->
+        <!-- LEGEND -->
         <div id="legend">
 
-            <div id="legendTitle">KEY:</div>
+            <div id="legendTitle">Key:</div>
 
-            <div id="key1">
+            <div id="key1" class="legendColumn">
                 MP: Minutes Played<br>
                 PTS: Points<br>
                 TRB: Total Rebounds<br>
                 AST: Assists
             </div>
 
-            <div id="key2">
+            <div id="key2" class="legendColumn">
                 BLK: Blocks<br>
                 STL: Steals<br>
                 FG%: Field Goal %<br>
@@ -74,14 +70,32 @@
 
         </div>
 
+        <!-- FEEDBACK -->
+        <div id="tryagain1" class="textArea" style="display: none;">
+            Try Again!
+        </div>
+
+        <div id="nicework1" class="textArea" style="display: none;">
+            Nice Work!
+        </div>
+
+        <button id="next1" style="display: none;">
+            Next Question
+        </button>
+
     </div>
 
     <!-- END SCREEN -->
     <div id="end" class="screen" style="display: none;">
-        <div id="text_area3">Good Job!</div>
+
+        <div id="text_area3" class="textArea">
+            Good Job!
+        </div>
+
         <img id="image1"
              src="assets/giannis-thumbs-up.jpg"
              alt="Giannis Thumbs Up">
+
     </div>
 
     <script src="app.js"></script>
