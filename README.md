@@ -16,6 +16,10 @@ The game uses NBA player statistics to create trivia questions and provides an i
 - HTML
 - CSS
 
+## Development
+
+Originally created on Code.org for the AP Computer Science Principles Create Task. Additional modifications were made to adapt the project for GitHub Pages.
+
 ## Live Project
 
 [Play the Basketball Trivia Game](https://ryanchiang023.github.io/createtaskproject/)
